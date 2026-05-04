@@ -1,0 +1,28 @@
+html body{
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+
+}
+.profile{
+	border-radius: 50%;
+}
+/* .links{ */
+/* 	background-color: black; */
+/* 	color: white; */
+/* 	text-shadow: 0 0 3pc black; */
+/* 	border-color: white; */
+/* 	border-radius: 40px; */
+/* 	corner-shape: squircle; */
+/* } */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(20,20,20);
+	color: white;
+	text-shadow: 0 0 3px black;
+
+}

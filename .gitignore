@@ -1,1 +1,6 @@
 .build-out/
+/raylib/.build-out/
+/website/.build-out/
+/website/ssl/
+/website/data/
+/website/.env
