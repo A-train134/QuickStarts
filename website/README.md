@@ -23,9 +23,6 @@ and adding the following line to nginx.conf inside the html may be neccesary
 ```bash
 html {
     include /etc/nginx/conf.d/*.conf;
-
-    types_hash_max_size 2048;
-    types_hash_bucket_size 128;
 }
 ```
 ## Nginx
