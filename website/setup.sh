@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 set -e
 site_name="quickstart_site"
-while getopts "noc" opt; do 
+while getopts "noch" opt; do 
 	case $opt in
 	n) # nginx on ubuntu
 		echo "Testing and Reloading nginx..."
@@ -22,6 +22,14 @@ while getopts "noc" opt; do
 		nginx -s reload
 		echo "Done"
 		;;
+	h) #probaly should change this to a help
+		echo "Writing the host.conf..."
+		cp -f ./${site_name}_host.conf /etc/nginx/conf.d/ 
+		nginx -t
+		nginx -s reload
+
+		echo "Done"
+		;;
 	c)
 		echo "Copying Files..."
 		cp -rf ./basic_site/ /var/www/${site_name}
@@ -29,13 +37,14 @@ while getopts "noc" opt; do
 		;;
 	\?)
 		echo "Invalid Option" >&2
+		echo "Options"
+		echo "-u handle nginx on [u]buntu"
+		echo "-a handle nginx on [a]rch/ubuntu"
+		echo "-c copy site files to /var/www/."
+		echo "-h copy the conf for host"
 		exit 1
 		;;
 	esac
 done
-# echo "Options"
-# echo "-u handle nginx on [u]buntu"
-# echo "-a handle nginx on [a]rch/ubuntu"
-# echo "-c copy site files to /var/www/."
 echo "Done"
 exit 0
