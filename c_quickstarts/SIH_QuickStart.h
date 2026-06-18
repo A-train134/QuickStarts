@@ -1,10 +1,18 @@
+// TO USE:
+// define anything like example.h before the define SIH_QUICKSTART
+//
+// #define SIH_QUICKSTART
+// #include "SIH_QuickStart.h"
+//
+//
+//
 #ifndef SIH_QUICKSTART
 #define SIH_QUICKSTART
 #include <cstdio>
 //
-#ifndef HELPER_IMPLEMENTATION
-#define HELPER_IMPLEMENTATION
-#include "helpers.h"
+#ifndef EXAMPLE_IMPLEMENTATION
+#define EXAMPLE_IMPLEMENTATION
+#include "example.h"
 //
 #endif
 typedef struct Foo {
